@@ -30,8 +30,10 @@ async function initialize() {
   const paymentElementOptions = {
     layout: "tabs",
   };
-
+  const options = { mode: 'billing' };
   const paymentElement = elements.create("payment", paymentElementOptions);
+  const addressElement = elements.create('address', options);
+  addressElement.mount('#address-element');
   paymentElement.mount("#payment-element");
 }
 
